@@ -1,0 +1,16 @@
+
+.education-input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    height: 30vh;
+    width: 50vw;
+}
+
+.education-form {
+    display: grid;
+    grid-template: repeat(2, 33%) / repeat(2, 45%);
+    column-gap: 32px;
+    row-gap: 16px;
+}
