@@ -44,4 +44,20 @@ class ExperienceInput extends Component {
     }
 }
 
+export class ExperienceDisplay extends Component {
+    constructor () {
+        super()
+
+        this.state = {}
+    }
+
+    render () {
+        return (
+            <div>
+                <h1>Done!</h1>
+            </div>
+        )
+    }
+}
+
 export default ExperienceInput

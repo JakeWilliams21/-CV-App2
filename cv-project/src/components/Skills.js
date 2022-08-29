@@ -6,7 +6,7 @@ class SkillsInput extends Component {
         super(props) 
         this.state = {
             skillName: '',
-            skillLevel: ''
+            skillLevel: 5
         }
         this.handleSkillsSubmit = this.handleSkillsSubmit.bind(this)
     }
@@ -17,6 +17,7 @@ class SkillsInput extends Component {
             newState[valueName] = e.target.value
             return newState
         })
+        console.log(e.target.value);
     }
 
     handleSkillsSubmit = (e) => {
@@ -33,6 +34,22 @@ class SkillsInput extends Component {
                     <input onChange = {e => this.handleSkillsChange(e, 'skillLevel')} placeholder = 'skill-level' type = 'range' min = '0' max = '5' name = 'skillLevel' id = 'skillLevel' />
                     <button onClick = {this.handleSkillsSubmit}>Submit</button>
                 </form>
+            </div>
+        )
+    }
+}
+
+export class SkillsDisplay extends Component {
+    constructor () {
+        super() 
+
+        this.state = {}
+    }
+
+    render () {
+        return (
+            <div>
+                <h1>Done!</h1>
             </div>
         )
     }
