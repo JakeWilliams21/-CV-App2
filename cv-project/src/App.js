@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 import EducationInput, {EducationDisplay} from './components/Education';
 import ExperienceInput, {ExperienceDisplay} from './components/Experience';
 import SkillsInput, {SkillsDisplay} from './components/Skills';
-import PersonalInput from './components/Personal';
+import PersonalInput, { PersonalDisplay } from './components/Personal';
 import Navbar from './components/Navbar';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
       isSkillsEdit: true,
       isSummaryEdit: true
     }
-
+    this.handlePersonalSubmit = this.handlePersonalSubmit.bind(this)
     this.handleEducationSubmit = this.handleEducationSubmit.bind(this)
     this.handleJobSubmit = this.handleJobSubmit.bind(this)
     this.handleSkillsSubmit = this.handleSkillsSubmit.bind(this)
@@ -26,11 +26,11 @@ class App extends Component {
   handlePersonalSubmit = (info) => {
     this.setState(prevState => {
       return {
-        info: {
+        personal: {
           firstName: info.firstName,
           lastName: info.lastName,
           email: info.email,
-          phone: info.name
+          phone: info.phone
         },
         isPersonalEdit: !prevState.isPersonalEdit
       }
@@ -93,15 +93,16 @@ class App extends Component {
       <Navbar />
       {this.state.isPersonalEdit ? 
         <PersonalInput submit = {this.handlePersonalSubmit} personal = {this.state.personal} /> :
-        <h1>Done!</h1>
+        <PersonalDisplay personal = {this.state.personal} />
       }
+      
       {this.state.isEducationEdit ?
         <EducationInput submit = {this.handleEducationSubmit} education = {this.state.education} /> :
         <EducationDisplay education = {this.state.education} />
       }
       {this.state.isExperienceEdit ?
-        <ExperienceInput submit = {this.handleJobSubmit} experience = {this.state.experience} /> :
-        <ExperienceDisplay experience = {this.state.experience} />
+        <ExperienceInput submit = {this.handleJobSubmit} job = {this.state.job} /> :
+        <ExperienceDisplay job = {this.state.job} />
       }
       {this.state.isSkillsEdit ?
         <SkillsInput submit = {this.handleSkillsSubmit} /> :

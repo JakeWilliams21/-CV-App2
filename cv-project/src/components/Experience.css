@@ -13,3 +13,19 @@
     column-gap: 32px;
     row-gap: 16px;
 }
+
+.experience-parent {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+}

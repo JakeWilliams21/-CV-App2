@@ -53,8 +53,18 @@ export class ExperienceDisplay extends Component {
 
     render () {
         return (
-            <div>
-                <h1>Done!</h1>
+            <div className = 'experience-parent'>
+                    <h2>Experience</h2>
+                    <div className = 'experience-div'>
+                    <div className = 'experience-left'>
+                        <h2>{this.props.job.company}</h2>
+                        <h3>{this.props.job.position}</h3>
+                    </div>
+                    <div className = 'experience-right'>
+                        <p>{this.props.job.jobFrom} - {this.props.job.jobTo}</p>
+                    </div>
+                </div>
+                <hr/>
             </div>
         )
     }

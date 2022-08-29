@@ -44,4 +44,24 @@ class PersonalInput extends Component {
     }
 }
 
+export class PersonalDisplay extends Component {
+    
+    render () {
+        return (
+            <div className = 'personal-parent'>
+            <div className = 'personal-div'>
+                <div className = 'personal-left'>
+                    <h2>{this.props.personal.firstName} {this.props.personal.lastName}</h2>
+                </div>
+                <div className = 'personal-right'>
+                    <p>{this.props.personal.email}</p>
+                    <p>{this.props.personal.phone}</p>
+                </div>
+            </div>
+            <hr/>
+            </div>
+        )
+    }
+}
+
 export default PersonalInput

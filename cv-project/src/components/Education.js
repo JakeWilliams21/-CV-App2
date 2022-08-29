@@ -46,8 +46,19 @@ export class EducationDisplay extends Component {
 
     render () {
         return (
-            <div>
-                <h1>Done!</h1>
+            <div className = 'education-display-div'>
+                <h2>Education</h2>
+                <div className = 'education-info-div'>
+                    <div className = 'education-left'>
+                        <h2>{this.props.education.school}</h2>
+                        <h3>{this.props.education.major}</h3>
+                    </div>
+                    <div className = 'education-right'>
+                        <p>{this.props.education.schoolFrom} - {this.props.education.schoolTo}</p>
+                    </div>
+                </div>
+                <hr />
+                
             </div>
         )
     }

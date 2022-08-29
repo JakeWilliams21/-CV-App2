@@ -13,3 +13,24 @@
     column-gap: 32px;
     row-gap: 16px;
 }
+
+.personal-parent {
+    width: 90%;
+    margin: 0;
+}
+
+.personal-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.personal-right {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+hr {
+    width: 100%;
+}
